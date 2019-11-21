@@ -47,8 +47,15 @@ void insertion_sort(int arr[], int n)
                 arr[j + 1] = arr[j];
                 hole = j;
             }
+            else
+            {
+                break;
+            }
         }
 
         arr[hole] = in_hand;
+
+        printf("Pass %d: ", i);
+        print_array(arr, n);
     }
 }
